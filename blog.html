@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Thoughts on Code & Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .blog-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-chip.active {
+            background-color: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation (consistent with homepage & about) -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span
+                    class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">CGTechnology</span>
+
+            </div>
+            <div class="hidden md:flex gap-8 text-gray-600 font-medium">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="blog.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Blog</a>
+                <a href="project.html" class="hover:text-blue-600 transition">Projects</a>
+                <a href="about.html" class="hover:text-blue-600 transition">About</a>
+            </div>
+            <div class="flex gap-3">
+                <i class="fab fa-github text-xl text-gray-600 hover:text-gray-900 cursor-pointer"></i>
+                <i class="fab fa-linkedin text-xl text-gray-600 hover:text-blue-700 cursor-pointer"></i>
+                <i class="fab fa-twitter text-xl text-gray-600 hover:text-sky-500 cursor-pointer"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="bg-gradient-to-r from-blue-200 to-purple-200 py-16 md:py-24">
+        <div class=" mx-auto px-6 text-center">
+            <div
+                class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium mb-5 shadow-sm">
+                <i class="fas fa-pen-fill text-blue-600"></i> Thoughts & Tutorials
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-5">Our New<span
+                    class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> World</span>
+            </h1>
+            <p>The Future of Technology and Solar Energy Technology is changing the way we live, work, and power our
+                world. One of the most important innovations today is the combination of modern technology with solar
+                energy. As the demand for reliable and affordable electricity continues to grow, solar power is becoming
+                a smart and sustainable solution for homes and businesses. Solar energy uses sunlight to generate
+                electricity through solar panels. Unlike traditional power sources, it is clean, renewable, and
+                environmentally friendly. With the advancement of technology, solar systems have become more efficient,
+                more affordable, and easier to install than ever before. In many parts of the world, especially in areas
+                with unstable power supply, solar energy provides a dependable alternative. It reduces reliance on fuel
+                generators, lowers electricity costs, and ensures constant power for essential systems like lighting,
+                security cameras, and automated devices. Technology also plays a key role in improving solar energy
+                systems. Smart inverters, battery storage systems, and automation allow users to monitor and control
+                their power usage in real-time. This means better energy management, improved efficiency, and greater
+                convenience.
+                For businesses and homeowners, investing in solar energy is not just about saving money—it is about
+                building a sustainable future. By adopting solar solutions, we reduce carbon emissions and contribute to
+                a cleaner environment.
+                In conclusion, the integration of technology and solar energy is shaping a better tomorrow. As
+                innovation continues to grow, solar power will become even more accessible and essential in our daily
+                lives. Now is the time to embrace this change and move towards a smarter, greener future..
+            </p>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="sticky top-[73px] z-40 bg-white/90 backdrop-blur-sm border-b border-gray-200 py-4">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                <button
+                    class="category-chip px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition active"
+                    data-category="all">All Posts</button>
+                <button
+                    class="category-chip px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
+                    data-category="react">Smart Home Automation</button>
+                <button
+                    class="category-chip px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
+                    data-category="tailwind">Solar Energy System</button>
+                <button
+                    class="category-chip px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
+                    data-category="javascript">Security Surveillance</button>
+                <button
+                    class="category-chip px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
+                    data-category="design">Smart Cinema </button>
+                <button
+                    class="category-chip px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
+                    data-category="career"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post (Hero Article) -->
+    <section class="max-w-6xl mx-auto px-6 py-12">
+        <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-xl">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="p-8 md:p-10">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">Featured</span>
+                        <span class="text-gray-300 text-sm"><i class="far fa-calendar-alt mr-1"></i> Jan 15, 2025</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Building Accessible World: A Practical
+                        and Evidence To Show</h2>
+                    <p class="text-gray-300 mb-5 leading-relaxed">Learn how to creative.</p>
+                    <div class="flex items-center gap-3 mb-5">
+                        <img src="image/automation.jpg" alt="Author" class="h-full w-full">
+
+                    </div>
+                    <button
+                        class="bg-white text-gray-900 px-6 py-2.5 rounded-xl font-medium hover:bg-gray-100 transition inline-flex items-center gap-2">
+                        <img src="image/home aotomation.jpg" alt="" class="h-full w-full">
+                    </button>
+                </div>
+                <div
+                    class="h-64 md:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    <img src="image/video lock door phone.jpg" alt="" class="h-48 w-full object-fill">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="max-w-6xl mx-auto px-6 py-8 pb-20">
+        <div class="relative flex items-center justify-between mb-8">
+            <div class="w-10"></div> <!-- invisible spacer for balance -->
+            <h2 class="text-2xl font-bold text-center">Our Projects</h2>
+            <div class="flex gap-2">
+                <button class="p-2 rounded-lg border border-gray-300 hover:bg-gray-50">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                <button class="p-2 rounded-lg border border-gray-300 hover:bg-gray-50">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
+            <!-- Blog Post 1 - React -->
+            <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100"
+                data-category="react">
+                <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                    <img src="image/automation.jpg" alt="">
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded"></span>
+                        <span><i class="far fa-calendar-alt"></i> April 18, 2026</span>
+                        <span><i class="far fa-clock"></i> 6 min</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 hover:text-blue-600 cursor-pointer">Smart Home Automation</h3>
+                    <p class="text-gray-600 text-sm mb-4">Lighting Automatically turn lights on/off, adjust
+                        brightness/color based on time or occupancy, smart switches.</p>
+                    <a href="automation.html" class="text-blue-600 text-sm font-medium hover:underline">
+                        Read more →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 - Tailwind -->
+            <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100"
+                data-category="tailwind">
+                <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center">
+                    <img src="image/CINEMA 1.jpg" alt="" class="h-full w-full">
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                        <span class="bg-teal-100 text-teal-700 px-2 py-0.5 rounded"></span>
+                        <span><i class="far fa-calendar-alt"></i> Dec 5, 2025</span>
+                        <span><i class="far fa-clock"></i> 5 min</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 hover:text-blue-600 cursor-pointer">Our Smart Cinema</h3>
+                    <p class="text-gray-600 text-sm mb-4">Entertainment has evolved beyond traditional television, and
+                        smart cinema is now transforming how we experience movies at home. A smart cinema, also known as
+                        a home cinema system, combines advanced technology, high-quality audio and visual equipment, and
+                        automation to create a true cinematic experience within your own space.</p>
+                    <div class="flex items-center justify-between">
+                        <a href="solar.html" class="text-blue-600 text-sm font-medium hover:underline">
+                            Read more →
+                        </a>
+                        <i class="far fa-bookmark text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 - JavaScript -->
+            <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100"
+                data-category="javascript">
+                <div class="h-48 bg-gradient-to-br from-yellow-400 to-blue-200 flex items-center justify-center">
+                    <img src="image/AI smart.jpg" alt="" class="h-full w-full">
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+
+                        <span><i class="far fa-calendar-alt"></i> Nov 28, 2025</span>
+                        <span><i class="far fa-clock"></i> 10 min</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 hover:text-blue-600 cursor-pointer">Our [AI] Automation</h3>
+                    <p class="text-gray-600 text-sm mb-4">technology to perform tasks with minimal human intervention.
+                        It’s not just about robots on factory floors anymore. Today, automation spans software,
+                        artificial intelligence (AI), machine learning, and connected devices. Essentially, it replaces
+                        repetitive, manual, or time-consuming activities with consistent, reliable processes.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-600 text-sm font-medium cursor-pointer hover:underline">Read more
+                            →</span>
+                        <i class="far fa-bookmark text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 4 - Design -->
+            <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100"
+                data-category="design">
+                <div class="h-48 bg-gradient-to-br from--400 to-rose-500 flex items-center justify-center">
+                    <img src="image/600kmw.jpg" alt="" class="h-full w-full">
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+
+                        <span><i class="far fa-calendar-alt"></i> Nov 20, 2025</span>
+                        <span><i class="far fa-clock"></i> 4 min</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 hover:text-blue-600 cursor-pointer">SOLAR PANELTURNING SUNLIGHT
+                        INTO TECH'S FAVORITE FUEL
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Every other piece of tech gets smaller and faster. Solar panels just get cheaper and smarter.
+                        And that’s a bigger deal than most people realize.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-600 text-sm font-medium cursor-pointer hover:underline">Read more
+                            →</span>
+                        <i class="far fa-bookmark text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 5 - Career -->
+            <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100"
+                data-category="career">
+                <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center">
+                    <img src="image/smart door lock.jpg" alt="" class="h-full w-full">
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+
+                        <span><i class="far fa-calendar-alt"></i> DEC 12, 2025</span>
+                        <span><i class="far fa-clock"></i> 9 min</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 hover:text-blue-600 cursor-pointer">SMART DOOR LOCK
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4">Keys are 4,000-year-old tech. It’s time we patched that
+                        vulnerability. Smart door locks are where IoT, security, and convenience finally agree on
+                        something.
+
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-600 text-sm font-medium cursor-pointer hover:underline">Read more
+                            →</span>
+                        <i class="far fa-bookmark text-gray-400 hover:text-blue-500 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 6 - React -->
+            <div class="blog-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100"
+                data-category="react">
+                <div class="h-48 bg-gradient-to-br from--400 to-purple-500 flex items-center justify-center">
+                    <img src="image/lithium battery.webp" alt="">
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+
+                        <span><i class="far fa-calendar-alt"></i> Nov 5, 2025</span>
+                        <span><i class="far fa-clock"></i> 6 min</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 hover:text-blue-600 cursor-pointer">LITHIUM SOLAR BATTERY
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4">If solar panels are the engine, lithium batteries are the fuel
+                        tank. And right now, they’re the hottest piece of tech in energy.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-600 text-sm font-medium cursor-pointer hover:underline">Read more
+                            →</span>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+        <div class="max-w-3xl mx-auto px-6 text-center text-white">
+            <i class="fas fa-newspaper text-4xl mb-4"></i>
+            <h2 class="text-3xl font-bold mb-3">Never Miss A Post</h2>
+            <p class="text-blue-100 mb-6">Get the latest articles delivered straight to your inbox.</p>
+            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address"
+                    class="flex-1 px-4 py-3 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                <button
+                    class="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition">Subscribe</button>
+            </div>
+            <p class="text-blue-200 text-xs mt-4">No spam, unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 py-8 bg-white">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+            <p>© 2025 CGTechnology.</p>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-gray-900">Home</a>
+                <a href="blog.html" class="hover:text-gray-900">Blog</a>
+                <a href="about.html" class="hover:text-gray-900">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Category Filter Script -->
+    <script>
+        // Personalization
+        const yourName = "Your Name"; // ← CHANGE THIS
+
+        document.querySelectorAll('.bg-gradient-to-r.from-blue-600.to-purple-600.bg-clip-text.text-transparent').forEach(el => {
+            if (el.innerText.includes('[YourName]')) el.innerText = yourName;
+        });
+        document.querySelectorAll('.text-gray-300.text-sm, .text-sm.text-gray-300').forEach(el => {
+            if (el.innerText.includes('[Your Name]')) el.innerText = el.innerText.replace('[Your Name]', yourName);
+        });
+
+        // Category filtering
+        const filterButtons = document.querySelectorAll('.category-chip');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-600', 'text-white'));
+                button.classList.add('active', 'bg-blue-600', 'text-white');
+                button.classList.remove('bg-gray-100', 'text-gray-700');
+
+                const category = button.getAttribute('data-category');
+
+                blogCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        setTimeout(() => { card.style.opacity = '1'; }, 10);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Set initial active state
+        document.querySelector('.category-chip[data-category="all"]').classList.add('active', 'bg-blue-600', 'text-white');
+
+        // Newsletter demo
+        document.querySelector('.bg-white.text-blue-600.px-6.py-3.rounded-xl.font-semibold')?.addEventListener('click', () => {
+            const input = document.querySelector('input[type="email"]');
+            if (input?.value) alert(`📬 Thanks for subscribing, ${input.value}! (Demo)`);
+            else alert('Please enter your email address.');
+        });
+
+        // Read more demo alerts
+        document.querySelectorAll('.text-blue-600.text-sm.font-medium').forEach(link => {
+            link.addEventListener('click', () => alert('📖 Full article would open here. (Add your actual blog post pages)'));
+        });
+
+        // Featured post button
+        document.querySelector('.bg-white.text-gray-900.px-6.py-2.5.rounded-xl')?.addEventListener('click', () => {
+            alert('✨ Featured article preview — full content coming soon!');
+        });
+    </script>
+</body>
+
+</html>

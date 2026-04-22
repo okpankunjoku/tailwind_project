@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Portfolio & Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+        }
+
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-blue-600">
+
+    <!-- Navigation (same as homepage for consistency) -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-blue-500">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span
+                    class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">CGTechnology</span>
+
+            </div>
+            <div class="hidden md:flex gap-8 text-gray-600 font-medium">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="blog.html" class="hover:text-blue-600 transition">Blog</a>
+                <a href="project.html" class="hover:text-blue-600 transition">Projects</a>
+                <a href="about.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">About</a>
+            </div>
+            <div class="flex gap-3">
+                <a href="https://github.com/okpankunjoku" target="_blank">
+                    <i class="fab fa-github text-xl text-gray-600 hover:text-gray-900 cursor-pointer"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/yourusername" target="_blank">
+                    <i class="fab fa-linkedin text-xl text-gray-600 hover:text-blue-700 cursor-pointer"></i>
+                </a>
+
+                <a href="https://twitter.com/yourusername" target="_blank">
+                    <i class="fab fa-twitter text-xl text-gray-600 hover:text-sky-500 cursor-pointer"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Intro Section -->
+    <section class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+        <div class="text-center max-w-3xl mx-auto">
+            <div
+                class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+                <i class="fas fa-user-astronaut"></i> Technology Officer
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-600">I'm Chijioke <span
+                    class="bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent"></span class></h1>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                A technology officer
+                I turn ideas into beautiful, functional and reality.
+            </p>
+        </div>
+    </section>
+
+    <!-- Bio & Story Section -->
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-200 rounded-full opacity-50 blur-2xl"></div>
+                    <img src="image/cj.jpg" alt="Workspace"
+                        class="rounded-2xl shadow-xl relative z-10 w-full object-cover h-96">
+                </div>
+                <div class="flex gap-4 justify-center">
+                    <div class="bg-gray-100 rounded-xl p-3 text-center flex-1">
+                        <div class="text-2xl font-bold text-blue-600">3+</div>
+                        <div class="text-sm text-gray-600">Years Experience</div>
+                    </div>
+                    <div class="bg-gray-100 rounded-xl p-3 text-center flex-1">
+                        <div class="text-2xl font-bold text-blue-600">20+</div>
+                        <div class="text-sm text-gray-600">Projects Completed</div>
+                    </div>
+                    <div class="bg-gray-100 rounded-xl p-3 text-center flex-1">
+                        <div class="text-2xl font-bold text-blue-600">15+</div>
+                        <div class="text-sm text-gray-600">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-5">
+                <h2 class="text-3xl font-bold">My Journey Into Technology</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    I discovered technology back in college when I built my first automation system and solar Energy.
+                    What started as a curiosity quickly turned into a passion for creating digital solutions that
+                    help people and businesses thrive.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Today, I specialize in automation, solar Energy, and modern technology.
+                    I believe in excellent work, excellent relationship between our Client.
+                    When I'm not working, you'll find me contributing to open source,
+                    writing technical articles, or exploring new design trends.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <a href="#contact"
+                        class="bg-gray-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition inline-flex items-center gap-2">
+                        <i class="fas fa-paper-plane"></i> Let's connect
+                    </a>
+                    <a href="#"
+                        class="border border-gray-300 px-6 py-3 rounded-xl font-medium hover:bg-gray-50 transition inline-flex items-center gap-2">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Technologies -->
+    <section class="bg-gray-50 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-600">Smart Home and Solar System</h2>
+                <p class="text-gray-500 mt-2">Tools I use to bring ideas to life</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Frontend Skills -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <h3 class="text-xl font-bold text-gray-600">Technology Expert</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-600">solar
+                                    energy</span><span>90%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-600">Home
+                                    automation</span><span>85%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-[85%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-600">Surveillance /
+                                    Security</span><span>95%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-[95%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-600"> Smart control/ Access
+                                    control</span><span>92%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-[92%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Design & Tools -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-paintbrush text-2xl text-purple-600"></i>
+                        <h3 class="text-xl font-bold text-gray-600">The Parttern & Workflow</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-600">Smart /Smart
+                                    switches</span><span>80%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full w-[80%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span
+                                    class="text-gray-600">TIS</span><span>88%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full w-[88%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-600">Responsive
+                                    Design</span><span>94%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full w-[94%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-gray-600">Smart
+                                    devices</span><span>85%</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full w-[85%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values / Philosophy -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-600">Our Motivation</h2>
+            <p class="text-gray-500 mt-2">Our core principles as a respected technology company</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-mobile-alt text-2xl text-blue-600"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-2">User-first design</h3>
+                <p class="text-gray-500">Every pixel should serve a purpose. I build with empathy and accessibility in
+                    mind.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-code-branch text-2xl text-purple-600"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-2">Clean code</h3>
+                <p class="text-gray-500">Maintainable, documented, and scalable code that stands the test of time.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-rocket text-2xl text-green-600"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-2">Continuous learning</h3>
+                <p class="text-gray-500">Staying curious and embracing new technologies to deliver cutting-edge
+                    solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts / Timeline -->
+    <section class="bg-gradient-to-r from-gray-50 to-purple-50 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-600">Milestones & Moments</h2>
+                <p class="text-gray-600 mt-2">A quick timeline of my journey</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="relative border-l-2 border-blue-300 ml-4 pl-8 space-y-8">
+                    <div>
+                        <div class="absolute -left-3 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                        <h3 class="font-bold text-lg">2024</h3>
+                        <p class="text-gray-600">Launched my personal blog & reached 5k monthly readers</p>
+                    </div>
+                    <div>
+                        <div class="absolute -left-3 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                        <h3 class="font-bold text-lg">2023</h3>
+                        <p class="text-gray-600">Started freelancing & collaborated with 5+ startups</p>
+                    </div>
+                    <div>
+                        <div class="absolute -left-3 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                        <h3 class="font-bold text-lg">2023</h3>
+                        <p class="text-gray-600">A certified engineer in technology</p>
+                    </div>
+                    <div>
+                        <div class="absolute -left-3 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                        <h3 class="font-bold text-lg">2022</h3>
+                        <p class="text-gray-600">Built my first smart home</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA Section -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-20 text-center">
+        <div class="bg-white rounded-3xl p-10 shadow-xl border border-gray-100">
+            <i class="fas fa-hand-peace text-5xl text-gray-600 mb-4"></i>
+            <h2 class="text-3xl font-bold mb-3 text-gray-600">Want to work together?</h2>
+            <p class="text-gray-600 max-w-md mx-auto mb-8">I'm always open to discussing new projects, creative ideas,
+                or opportunities.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:okpan0002@gmail.com"
+                    class="bg-gray-900 text-white px-8 py-3 rounded-xl font-medium hover:bg-gray-800 transition inline-flex items-center gap-2">
+                    <i class="fas fa-envelope"></i>okpan0002@gmail.com
+                </a>
+                <a href="#"
+                    class="border border-gray-300 px-8 py-3 rounded-xl font-medium hover:bg-gray-50 transition inline-flex items-center gap-2">
+                    <i class="fab fa-calendar-alt"></i> Schedule a call
+                </a>
+            </div>
+            <div class="flex gap-6 justify-center mt-8 text-gray-500">
+                    <a href="https://github.com/yourusername" target="_blank">
+                        <i class="fab fa-github text-xl text-gray-600 hover:text-gray-900 cursor-pointer"></i>
+                    </a>
+
+                    <a href="https://linkedin.com/in/yourusername" target="_blank">
+                        <i class="fab fa-linkedin text-xl text-gray-600 hover:text-blue-700 cursor-pointer"></i>
+                    </a>
+
+                    <a href="https://twitter.com/martins75598848" target="_blank">
+                        <i class="fab fa-twitter text-xl text-gray-600 hover:text-sky-500 cursor-pointer"></i>
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 py-8">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+            <p>© 2025 CGTechnology.</p>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-gray-900">Home</a>
+                <a href="about.html" class="hover:text-gray-900">About</a>
+                <a href="#" class="hover:text-gray-900">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple interaction for demo -->
+    <script>
+        // Personalize name (replace all instances)
+        const yourName = "Your Name"; // ← CHANGE THIS TO YOUR NAME
+        const yourCity = "San Francisco"; // ← CHANGE THIS TO YOUR CITY
+        const yourEmail = "okpan0002@gmail.com"; // ← CHANGE THIS TO YOUR EMAIL
+
+        document.querySelectorAll('.bg-gradient-to-r.from-blue-600.to-purple-600.bg-clip-text.text-transparent').forEach(el => {
+            if (el.innerText.includes('[YourName]') || el.innerText === '[YourName]') {
+                el.innerText = yourName;
+            }
+        });
+
+        // Update city in bio
+        const bioParagraph = document.querySelector('.text-xl.text-gray-600.leading-relaxed');
+        if (bioParagraph && bioParagraph.innerText.includes('[Your City]')) {
+            bioParagraph.innerText = bioParagraph.innerText.replace('[Your City]', yourCity);
+        }
+
+        // Update email in contact section
+        const emailLink = document.querySelector('a[href^="mailto:"]');
+        if (emailLink) {
+            emailLink.href = `mailto:${yourEmail}`;
+            emailLink.innerText = yourEmail;
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Download resume demo
+        document.querySelector('a[href="#"]:has(.fa-download)')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('📄 Resume download would start here. (Add your actual PDF file)');
+        });
+    </script>
+</body>
+
+</html>
